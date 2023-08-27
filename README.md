@@ -138,6 +138,10 @@ Digite no terminal: `yarn add jest ts-jest @types/jest`
 `
 
 3 - Vá para o arquivo .lintstagedrc.json e adicione o seguinte comando: "yarn test:staged"
-
 4 - Para executar os testes, digite no terminal: `yarn test:watch`
 
+### Adicionando testes no Husky
+
+1 - Adicione no package.json o seguinte comando: `"test:push": "yarn test --coverage"`
+2 - Digite no terminal o comando: `npx husky add .husky/pre-push "yarn test:push"`
+3 - Crie um repositório no Github e suba a Branch. Isso adicionará a pasta coverage no projeto.
