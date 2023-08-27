@@ -150,3 +150,4 @@ Digite no terminal: `yarn add jest ts-jest @types/jest`
 ### Adicionando o campo de build
 
 Vá para o arquivo package.json e adicione os campos: `"build": "tsc",`
+
