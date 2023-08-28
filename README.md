@@ -172,4 +172,5 @@ Vá para o arquivo package.json e adicione os campos: `"build": "tsc",`
 
 ## Configurando as mensagens de commit com prefixos
 
-Instale a seguinte biblioteca: `yarn add -D git-commit-msg-linter`
+1 - Instale a seguinte biblioteca: `yarn add -D git-commit-msg-linter` <br>
+2 - Digite no terminal o seguinte comando: `npx husky add .husky/commit-msg ".git/hooks/commit-msg \$1"`
