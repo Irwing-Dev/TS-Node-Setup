@@ -4,9 +4,9 @@
 2 - Agora, inicie o projeto com: `npm init -y` <br> 
 3 - Crie o arquivo .gitignore e escreva nele: <br>
 `
-node_modules/ <br>
-coverage/ <br>
-dist/ <br>
+node_modules/ `<br>`
+coverage/ `<br>`
+dist/
 `
 
 ## Estrutura de commits
@@ -38,21 +38,21 @@ Para iniciar esse arquivo, digite no terminal o comando: `tsc --init` <br>
 
 Após ter sido criado, configure-o com as seguintes opções: <br>
 
-`{ <br>
-  "compilerOptions": { <br>
-    "target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library <br> declarations. */, <br>
-    "module": "commonjs" /* Specify what module code is generated. */, <br>
-    "rootDir": "./src", <br>
-    "outDir": "./dist", <br>
-    "moduleResolution": "Node" /* Specify how TypeScript looks up a file from a given module specifier. */, <br>
-    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */, <br>
-    "strict": true /* Enable all strict type-checking options. */, <br>
-    "skipLibCheck": true /* Skip type checking all .d.ts files. */, <br>
-    "baseUrl": "./src", <br>
-    "paths": { <br>
-      "@/*": ["*"] <br>
-    } <br>
-  } <br>
+`{ `<br>`
+  "compilerOptions": { `<br>`
+    "target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library <br> declarations. */, `<br>`
+    "module": "commonjs" /* Specify what module code is generated. */, `<br>`
+    "rootDir": "./src", `<br>`
+    "outDir": "./dist", `<br>`
+    "moduleResolution": "Node" /* Specify how TypeScript looks up a file from a given module specifier. */, `<br>`
+    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */, `<br>`
+    "strict": true /* Enable all strict type-checking options. */, `<br>`
+    "skipLibCheck": true /* Skip type checking all .d.ts files. */, `<br>`
+    "baseUrl": "./src", `<br>`
+    "paths": { `<br>`
+      "@/*": ["*"] `<br>`
+    } `<br>`
+  } `<br>`
 }`
 
 ### Adicionando o script do nodemon
@@ -92,10 +92,10 @@ Vá para o arquivo .eslintrc.json e faça as seguintes etapas: <br>
 
 Crie um arquivo com o nome .prettierrc.json e configure-o da seguinte maneira: <br>
 
-`{
-    "semi": false, <!-- Serve para tirar o ";" --> <br>
-    "singleQuote": false, <!-- Serve para impedir que o código tenha aspas simples  --> <br>
-    "tabWidth": 4 <!-- Se refere à quantidade de reuco da linha --> <br>
+`{ `<br>`
+    "semi": false, <!-- Serve para tirar o ";" --> `<br>`
+    "singleQuote": false, <!-- Serve para impedir que o código tenha aspas simples  --> `<br>`
+    "tabWidth": 4 <!-- Se refere à quantidade de reuco da linha --> `<br>`
 }`
 
 ## Husky e Lint-Staged
@@ -126,24 +126,24 @@ Digite no terminal: `yarn add -D jest ts-jest @types/jest`
 
 1 - Crie um arquivo chamado jest.config.js e adicione os seguintes comandos: <br>
 
-`module.exports = { <br>
-  roots: ["<rootDir>/src"], <br>
-  collectCoverageFrom: ["<rootDir>/src/**/*.ts"], <br>
-  coverageDirectory: "coverage", <br>
-  testEnvironment: "node", <br>
-  transform: { <br>
-    ".+\\.ts$": "ts-jest", <br>
-  }, <br>
-  moduleNameMapper: { <br>
-    "@/(.*)": "<rootDir>/src/$1", <br>
-  }, <br>
+`module.exports = { `<br>`
+  roots: ["<rootDir>/src"], `<br>`
+  collectCoverageFrom: ["<rootDir>/src/**/*.ts"], `<br>`
+  coverageDirectory: "coverage", `<br>`
+  testEnvironment: "node", `<br>`
+  transform: { `<br>`
+    ".+\\.ts$": "ts-jest", `<br>`
+  }, `<br>`
+  moduleNameMapper: { `<br>`
+    "@/(.*)": "<rootDir>/src/$1", `<br>`
+  }, `<br>`
 }` <br>
 
 2 - Vá para o arquivo package.json e adicione os seguintes comandos:  <br>
 
 `
-  "test": "jest --passWithNoTests", <br>
-  "test:watch": "yarn test --watch", <br>
+  "test": "jest --passWithNoTests", `<br>`
+  "test:watch": "yarn test --watch", `<br>`
   "test:staged": "yarn test --findRelatedTests"
 `
 <br> <br>
