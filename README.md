@@ -2,7 +2,12 @@
 
 1 - Comece um repositório digitando no terminal: `git init` <br>
 2 - Agora, inicie o projeto com: `npm init -y` <br> 
-3 - Crie o arquivo .gitignore e escreva nele: `node_modules/`
+3 - Crie o arquivo .gitignore e escreva nele: <br>
+`
+node_modules/ <br>
+coverage/ <br>
+dist/ <br>
+`
 
 ## Estrutura de commits
 
@@ -101,7 +106,7 @@ Digite no terminal: `yarn add -D husky lint-staged`
 
 ### Configurando o Husky
 
-1 - Vá para o arquivo package.json e na parte de scripts, adicione abaixo de "dev": `"husky:prepare": "husky install"` <br>
+1 - Vá para o arquivo package.json e na parte de scripts, adicione o comando: `"husky:prepare": "husky install"` <br>
 2 - Digite no terminal: yarn husky:prepare - Isso criará a pasta .husky <br>
 3 - Cole no terminal o seguinte comando: `npx husky add .husky/pre-commit "yarn lint-staged"`
 
@@ -115,7 +120,7 @@ Crie um arquivo chamado .lintstagedrc.json e adicione as seguintes configuraçõ
 
 ## Jest
 
-Digite no terminal: `yarn add jest ts-jest @types/jest`
+Digite no terminal: `yarn add -D jest ts-jest @types/jest`
 
 ### Configurando o Jest
 
@@ -155,3 +160,12 @@ Digite no terminal: `yarn add jest ts-jest @types/jest`
 
 Vá para o arquivo package.json e adicione os campos: `"build": "tsc",`
 
+### Configurando os caminhos com @
+
+1 - Intale a biblioteca tsconfig-paths com o seguinte comando: `yarn add -D tsconfig-paths` <br>
+2 - Vá para o package.json e mude a linha de comando do "dev" para: `"dev": "nodemon --watch \"src\" --exec \"ts-node -r tsconfig-paths/register src/index.ts\" -e ts"` 
+
+### Configurando os caminhos com @ - Build
+
+1 - Instale a biblioteca com o seguinte comando: `yarn add -D tsc-alias` <br>
+2 - No script de "build" em package.json, mude-o para o seguinte comando: `"build": "tsc && tsc-alias"`

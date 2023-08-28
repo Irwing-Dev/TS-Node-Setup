@@ -1,3 +1,7 @@
-import Person from "@/index"; // O "@" se deve à uma configuração feita no tsconfig.json que impede que seja preciso dar vários ../../../ para achar um arquivo.
+class Developer {
+    myFunction(): string {
+        return "Web Developer";
+    }
+}
 
-console.log(new Person().myName());
+export default Developer;
