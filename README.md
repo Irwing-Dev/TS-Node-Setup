@@ -169,3 +169,7 @@ Vá para o arquivo package.json e adicione os campos: `"build": "tsc",`
 
 1 - Instale a biblioteca com o seguinte comando: `yarn add -D tsc-alias` <br>
 2 - No script de "build" em package.json, mude-o para o seguinte comando: `"build": "tsc && tsc-alias"`
+
+## Configurando as mensagens de commit com prefixos
+
+Instale a seguinte biblioteca: `yarn add -D git-commit-msg-linter`
