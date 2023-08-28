@@ -43,6 +43,10 @@ Após ter sido criado, configure-o com as seguintes opções: <br>
     "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */, <br>
     "strict": true /* Enable all strict type-checking options. */, <br>
     "skipLibCheck": true /* Skip type checking all .d.ts files. */, <br>
+    "baseUrl": "./src", <br>
+    "paths": { <br>
+      "@/*": ["*"] <br>
+    } <br>
   } <br>
 }`
 
