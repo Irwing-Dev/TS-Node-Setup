@@ -40,7 +40,7 @@ Após ter sido criado, configure-o com as seguintes opções: <br>
 
 `{ `<br>`
   "compilerOptions": { `<br>`
-    "target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library <br> declarations. */, `<br>`
+    "target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */, `<br>`
     "module": "commonjs" /* Specify what module code is generated. */, `<br>`
     "rootDir": "./src", `<br>`
     "outDir": "./dist", `<br>`
@@ -174,3 +174,7 @@ Vá para o arquivo package.json e adicione os campos: `"build": "tsc",`
 
 1 - Instale a seguinte biblioteca: `yarn add -D git-commit-msg-linter` <br>
 2 - Digite no terminal o seguinte comando: `npx husky add .husky/commit-msg ".git/hooks/commit-msg \$1"`
+
+## Comando final com a instalação de todas as libs
+
+`yarn add -D typescript ts-node @types/node nodemon eslint prettier eslint-config-prettier husky lint-staged jest ts-jest @types/jest tsconfig-paths tsc-alias git-commit-msg-linter`
